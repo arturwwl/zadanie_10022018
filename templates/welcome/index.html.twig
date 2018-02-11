@@ -1,13 +1,46 @@
 {% extends'base.html.twig' %}
 
-{% block title %}Welcome Title{% endblock %}
+{% block title %}Strona główna{% endblock %}
 
 {% block main %}
-    <div>
-        <h1>Let's Explore Symfony 4</h1>
-        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras rutrum sapien mauris, venenatis
-            facilisis neque tincidunt vel. Maecenas vel felis vel turpis scelerisque eleifend. Fusce nec purus egestas,
-            efficitur nisi ac, ultrices nulla. Pellentesque eu mollis tortor, in mollis nisl. Maecenas rhoncus quam non
-            lacinia mollis.</p>
+    <div class="col-sm-12 weather-container">
+        <div class="row">
+            <div class="col-sm-12 weather-header">
+                <h2>{{ weather.name }} <span class="weather-cords">({{ weather.coord.lat }}, {{ weather.coord.lon }})</span></h2>
+            </div>
+            <div class="col-sm-12 weather-body">
+                <div class="row">
+                    <div class="col-sm-12 col-md-6 weather-left">
+                        <i class="wi wi-owm-{{ weather.weather.0.id }}"></i>
+                        <div class="weather-temp">
+                            <em class="weather-range">
+                                <span class="min">{{ weather.main.temp_min|round }}&#186C</span>
+                                <span class="max">{{ weather.main.temp_max|round }}&#186C</span>
+                            </em>
+                            <strong>{{ weather.main.temp|round }}<span>&#186C</span></strong>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 weather-right">
+                        <p><i class="wi wi-strong-wind"></i> Prędkość wiatru: <span>{{ weather.wind.speed }}</span></p>
+                        <p><i class="wi wi-cloudy"></i> Zachmurzenie: <span>{{ weather.clouds.all }}</span></p>
+                        <p><i class="wi wi-sunrise"></i> Wschód słońca: <span>{{ weather.sys.sunrise|date('H:i') }}</span></p>
+                        <p><i class="wi wi-sunset"></i> Zachód słońca: <span>{{ weather.sys.sunset|date('H:i') }}</span></p>
+                        <p><i class="wi wi-barometer"></i> Ciśnienie: <span>{{ weather.main.pressure }}</span></p>
+                        <p><i class="wi wi-humidity"></i> Wiglotność powietrza: <span>{{ weather.main.humidity }}</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="weather-search col-12">
+        {{ form_start(map_form) }}
+        <h3 class="text-center">Wyszukaj pogodę w innym mieście</h3>
+        {{ form_widget(map_form) }}
+        <div class="form-group row">
+            <div class="col-sm-4 offset-sm-4">
+                <input type="submit" value="Szukaj" class="col-sm-12 btn btn-success"/>
+            </div>
+        </div>
+        {{ form_end(map_form) }}
     </div>
 {% endblock %}

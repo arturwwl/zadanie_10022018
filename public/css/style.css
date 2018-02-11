@@ -1,3 +1,83 @@
-.lead{
+main {
+  padding: 15px; }
+  main .weather-container {
+    border-radius: 5px;
+    border: solid 1px #000; }
+    main .weather-container .weather-header {
+      z-index: 1;
+      background: #e2e2e2;
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2e2e2', endColorstr='#fefefe', GradientType=0 );
+      background: -moz-linear-gradient(top, #e2e2e2 0%, #dbdbdb 50%, #d1d1d1 51%, #e2e2e2 100%);
+      background: -webkit-gradient(left top, left bottom, color-stop(0%, #e2e2e2), color-stop(50%, #dbdbdb), color-stop(51%, #d1d1d1), color-stop(100%, #e2e2e2));
+      background: -webkit-linear-gradient(top, #e2e2e2 0%, #dbdbdb 50%, #d1d1d1 51%, #e2e2e2 100%);
+      background: -o-linear-gradient(top, #e2e2e2 0%, #dbdbdb 50%, #d1d1d1 51%, #e2e2e2 100%);
+      background: -ms-linear-gradient(top, #e2e2e2 0%, #dbdbdb 50%, #d1d1d1 51%, #e2e2e2 100%);
+      background: linear-gradient(to bottom, #e2e2e2 0%, #dbdbdb 50%, #d1d1d1 51%, #e2e2e2 100%); }
+      main .weather-container .weather-header h2 {
+        color: #fff;
+        font-weight: bold;
+        text-shadow: 2px 2px 2px #333; }
+        main .weather-container .weather-header h2 span {
+          font-size: 0.6em;
+          position: relative;
+          top: -0.1em; }
+    main .weather-container .weather-body .weather-left {
+      background: #b3dced;
+      background: -moz-linear-gradient(top, #b3dced 0%, #29b8e5 100%);
+      background: -webkit-gradient(left top, left bottom, color-stop(0%, #b3dced), color-stop(100%, #29b8e5));
+      background: -webkit-linear-gradient(top, #b3dced 0%, #29b8e5 100%);
+      background: -o-linear-gradient(top, #b3dced 0%, #29b8e5 100%);
+      background: -ms-linear-gradient(top, #b3dced 0%, #29b8e5 100%);
+      background: linear-gradient(to bottom, #b3dced 0%, #29b8e5 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3dced', endColorstr='#bce0ee', GradientType=0 ); }
+      main .weather-container .weather-body .weather-left > .wi {
+        font-size: 13em;
+        color: #fff; }
+        @media (max-width: 768px) {
+          main .weather-container .weather-body .weather-left > .wi {
+            font-size: 12em;
+            padding-bottom: 15px; } }
+      main .weather-container .weather-body .weather-left .weather-temp {
+        position: absolute;
+        margin: 0;
+        bottom: 0px;
+        right: 15px;
+        font-size: 6em; }
+        @media (max-width: 992px) {
+          main .weather-container .weather-body .weather-left .weather-temp {
+            font-size: 5em; } }
+        @media (max-width: 768px) {
+          main .weather-container .weather-body .weather-left .weather-temp {
+            font-size: 4em; } }
+        main .weather-container .weather-body .weather-left .weather-temp strong {
+          text-shadow: 3px 3px 10px #555;
+          color: #e4e438; }
+        main .weather-container .weather-body .weather-left .weather-temp .weather-range {
+          font-size: 0.3em; }
+          main .weather-container .weather-body .weather-left .weather-temp .weather-range span {
+            color: #111;
+            position: relative;
+            text-shadow: 2px 2px 2px #fff; }
+            main .weather-container .weather-body .weather-left .weather-temp .weather-range span:after {
+              position: absolute;
+              top: -1em;
+              font-size: 0.5em;
+              left: 0; }
+            main .weather-container .weather-body .weather-left .weather-temp .weather-range span.min:after {
+              content: 'min'; }
+            main .weather-container .weather-body .weather-left .weather-temp .weather-range span.max:after {
+              content: 'max'; }
+    main .weather-container .weather-body .weather-right {
+      font-weight: 600;
+      background-color: #f0f8ff;
+      text-shadow: 3px 3px 4px #aaa; }
+      @media (max-width: 768px) {
+        main .weather-container .weather-body .weather-right {
+          padding-top: 10px; } }
+  main .weather-search {
     margin-top: 15px;
-}
+    border: solid 1px #000;
+    border-radius: 5px;
+    padding: 15px; }
+
+/*# sourceMappingURL=style.css.map */
