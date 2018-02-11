@@ -27,6 +27,7 @@
                         <p><i class="wi wi-sunset"></i> Zachód słońca: <span>{{ weather.sys.sunset|date('H:i') }}</span></p>
                         <p><i class="wi wi-barometer"></i> Ciśnienie: <span>{{ weather.main.pressure }}</span></p>
                         <p><i class="wi wi-humidity"></i> Wiglotność powietrza: <span>{{ weather.main.humidity }}</span></p>
+                        <em>Ostatnia aktualizacja: {{ weather.date|round(0, 'floor')|date('Y-m-d H:i') }}</em>
                     </div>
                 </div>
             </div>
